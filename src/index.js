@@ -29,6 +29,9 @@ angular.module('petApp', [uirouter])
   .controller('HomeController', HomeController)
   .controller('DetailController', DetailController)
 
+  // inject those directives
+  HomeController.$inject = ['$scope', '$http'];
+
   /**
    * Home controller for view home
    * @param {*} $scope 
@@ -51,10 +54,8 @@ angular.module('petApp', [uirouter])
       console.log(response.statusText)
     })
   }
-  
-  // inject those directives
-  HomeController.$inject = ['$scope', '$http'];
 
+  DetailController.$inject = ['$scope', '$stateParams']
   /**
    * Detail controller for view details
    * @param {*} $scope 
@@ -67,5 +68,3 @@ angular.module('petApp', [uirouter])
     $scope.id = $stateParams.id;
     $scope.pet = petInfo;
   }
-
-  DetailController.$inject = ['$scope', '$stateParams'];
