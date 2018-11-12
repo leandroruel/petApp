@@ -1,7 +1,6 @@
 import angular from 'angular'
 import uirouter from '@uirouter/angularjs'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '@fortawesome/fontawesome-free'
 
 angular.module('petApp', [uirouter])
 // Routes
@@ -29,7 +28,7 @@ angular.module('petApp', [uirouter])
   .controller('HomeController', HomeController)
   .controller('DetailController', DetailController)
 
-  // inject those directives
+  // inject to minification safe
   HomeController.$inject = ['$scope', '$http'];
 
   /**
@@ -55,7 +54,8 @@ angular.module('petApp', [uirouter])
     })
   }
 
-  DetailController.$inject = ['$scope', '$stateParams']
+  DetailController.$inject = ['$scope', '$stateParams'];
+
   /**
    * Detail controller for view details
    * @param {*} $scope 
