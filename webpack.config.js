@@ -55,13 +55,14 @@ module.exports = {
                 {
                     loader: 'image-webpack-loader',
                     options: {
-                        bypassOnDebug: true, // webpack@1.x
+                        bypassOnDebug: true,
                         disable: true,
                     }
                 }
             ]
-        },
-    ],
+        }
+        ]
+    },
     stats: {
         errorDetails: true,
         errors: true
@@ -94,6 +95,11 @@ module.exports = {
                 from: 'data.json',
                 to: 'data.json',
                 toType: 'file'
+            },
+            {
+                from: './assets/images/',
+                to: 'assets/images',
+                toType: 'dir'
             }
         ])
     ]
