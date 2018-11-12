@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card-group pet-list" id="petsList">
+              <div class="card" ng-repeat="pet in pets">
+                <img ng-src="assets/images/{{ pet.image }}" alt="" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ pet.name }}</h5>
+                    <p>{{ pet.description }}</p>
+                    <a data-ui-sref="detail({ 'id': pet.id })" class="btn btn-primary btn-block">ver detalhes</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

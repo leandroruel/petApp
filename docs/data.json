@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "breed": "pug",
+            "name": "lola",
+            "weight": 5,
+            "age_in_months": 3,
+            "location": "São Bento, São Paulo",
+            "image": "pug-300x300.jpg",
+            "description": "Um belo pugzinho que esta disponível imediato para adoção, muito dócil e brincalhão",
+            "vacines": "em conformidade",
+            "donor": "Patrícia Amaral"
+        },
+        {
+            "id": 2,
+            "breed": "shiba inu",
+            "name": "ryu",
+            "weight": 8,
+            "age_in_months": 6,
+            "location": "Paraíso, São Paulo",
+            "image": "shiba-inu-300x300.jpg",
+            "description": "Este shiba tem bastante energia e sabe brincar como ninguém",
+            "vacines": "em conformidade",
+            "donor": "Hiro nakashima"
+        },
+        {
+            "id": 3,
+            "breed": "poodle",
+            "name": "mila",
+            "weight": 5,
+            "age_in_months": 4,
+            "location": "Morumbi, São Paulo",
+            "image": "poodle-300x300.jpg",
+            "description": "este poodle é bem charmoso e é muito dócil e companheira",
+            "vacines": "pendente",
+            "donor": "Canil Municipal do Estado de São Paulo"
+        },
+        {
+            "id": 4,
+            "breed": "labrador retriever",
+            "name": "ralph",
+            "weight": 12,
+            "age_in_months": 12,
+            "location": "Tatuapé, São Paulo",
+            "image": "labrador-retriever-300x300.jpg",
+            "description": "um dos melhores amigos para o homem, cheio de energia, dócil e muito inteligente",
+            "vacines": "em conformidade",
+            "donor": "Alicia azevedo"
+        }
+    ]
+}
