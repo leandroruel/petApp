@@ -46,13 +46,14 @@ angular.module('petApp', [uirouter])
         // set the values on localstorage
         localStorage.setItem(`pet_${element.id}`, JSON.stringify(element));
       });
-
-
     },
     function error(response) {
       console.log(response.statusText)
     })
   }
+  
+  // inject those directives
+  HomeController.$inject = ['$scope', '$http'];
 
   /**
    * Detail controller for view details
@@ -66,3 +67,5 @@ angular.module('petApp', [uirouter])
     $scope.id = $stateParams.id;
     $scope.pet = petInfo;
   }
+
+  DetailController.$inject = ['$scope', '$stateParams'];
