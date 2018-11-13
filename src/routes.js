@@ -23,9 +23,9 @@ const routes = function($stateProvider, $urlRouterProvider) {
     controller: 'SubscribeController'
   }
 
-  var finisfinFormState = {
+  var finishFormState = {
     name: 'finish',
-    url: '/subscribe/finish/:id?name',
+    url: '/finish/:id/:name',
     templateUrl: './templates/Finish/finish.html',
     controller: 'FinishFormController'
   }
@@ -34,6 +34,7 @@ const routes = function($stateProvider, $urlRouterProvider) {
   $stateProvider.state(homeState);
   $stateProvider.state(detailState);
   $stateProvider.state(subscribeState);
+  $stateProvider.state(finishFormState);
 }
 
 export default routes
