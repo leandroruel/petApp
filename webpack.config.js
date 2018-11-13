@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
+const glob = require('glob');
 
 module.exports = {
   mode: 'development',
@@ -11,7 +12,9 @@ module.exports = {
       ignored: '/node_modules/'
   },
   devtool: 'source-map',
-  entry: './src/index.js',
+  entry: { 
+      'bundle.js': glob.sync(path.resolve(__dirname, 'src/**/*.js'))
+ },
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'app.js'
