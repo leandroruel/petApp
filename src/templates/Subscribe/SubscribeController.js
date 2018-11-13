@@ -4,14 +4,14 @@ angular
 .module('petApp')
 .controller('SubscribeController', SubscribeController)
 
-SubscribeController.$inject = ['$scope', '$document', '$stateParams', '$state'];
+SubscribeController.$inject = ['$scope', '$document', '$stateParams', '$location'];
 
 /**
  * set the controller for the subscribe form
  * 
  * @param {*} $scope 
  */
-function SubscribeController ($scope, $document, $stateParams, $state) {
+function SubscribeController ($scope, $document, $stateParams, $location) {
     // get the form button
     const BtnSubscribe = angular.element( document.querySelector("#subscribe") );
 
@@ -28,8 +28,4 @@ function SubscribeController ($scope, $document, $stateParams, $state) {
     BtnSubscribe.on('click', () => {        
         console.log($scope.user)
     })
-
-    $scope.submitForm = function () {
-        $state.go('/subscribe/finish', { id: $stateParams.id, name: $scope.user.name})
-    }
 }
