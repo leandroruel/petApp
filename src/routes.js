@@ -16,9 +16,17 @@ const routes = function($stateProvider, $urlRouterProvider) {
     controller: 'DetailController'
   }
 
+  var subscribeState = {
+    name: 'subscribe',
+    url: '/subscribe',
+    templateUrl: './templates/Subscribe/subscribe.html',
+    controller: 'SubscribeController'
+  }
+
   // all routes states
   $stateProvider.state(homeState);
   $stateProvider.state(detailState);
+  $stateProvider.state(subscribeState);
 }
 
 export default routes
