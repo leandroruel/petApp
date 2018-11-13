@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
+const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const glob = require('glob');
 
 module.exports = {
@@ -18,7 +19,7 @@ module.exports = {
  },
   output: {
     path: path.resolve(__dirname, 'docs'),
-    filename: 'app.js'
+    filename: 'app.min.js'
   },
   module: {
       rules: [
@@ -123,6 +124,7 @@ module.exports = {
         ]),
         new ngAnnotatePlugin({
             add: true
-        })
+        }),
+        new UnminifiedWebpackPlugin()
     ]
 };
