@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
+const ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 const glob = require('glob');
 
 module.exports = {
@@ -119,6 +120,9 @@ module.exports = {
                 to: 'assets/images',
                 toType: 'dir'
             }
-        ])
+        ]),
+        new ngAnnotatePlugin({
+            add: true
+        })
     ]
 };
