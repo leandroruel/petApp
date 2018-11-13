@@ -18,9 +18,16 @@ const routes = function($stateProvider, $urlRouterProvider) {
 
   var subscribeState = {
     name: 'subscribe',
-    url: '/subscribe',
+    url: '/subscribe/:id',
     templateUrl: './templates/Subscribe/subscribe.html',
     controller: 'SubscribeController'
+  }
+
+  var finisfinFormState = {
+    name: 'finish',
+    url: '/subscribe/finish/:id?name',
+    templateUrl: './templates/Finish/finish.html',
+    controller: 'FinishFormController'
   }
 
   // all routes states
