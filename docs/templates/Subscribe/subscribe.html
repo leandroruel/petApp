@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="display-4">Formulário de adoção</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <form>
+                <div class="form-group">
+                    <label for="">Nome</label>
+                    <input type="text" ng-model="user.name" class="form-control" ng-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="address">Endereço</label>
+                    <input type="text" ng-model="user.address" class="form-control" ng-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="address2">Endereço 2</label>
+                    <input type="text" ng-model="user.address2" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="reason">Motivo</label>
+                    <textarea ng-model="user.reason" id="" cols="30" rows="10" class="form-control" placeholder="Explique porque deseja adotar este animal..." ng-required="true"></textarea>
+                </div>
+                <div class="form-group">
+                    <div class="btn-group btn-group-lg btn-group-block">
+                        <a data-ui-sref="detail({id: petId})" class="btn btn-lg btn-secondary"><i class="fas fa-long-arrow-alt-left"></i> voltar</a>
+                        <a id="subscribe" data-ui-sref="finish({id: petId, name: user.name})" class="btn btn-lg  btn-primary">Próximo</a>
+                    </div>                    
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

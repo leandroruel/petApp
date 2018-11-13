@@ -1,0 +1,5 @@
+.btn-group-block {
+    display: grid !important;
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: auto;
+}

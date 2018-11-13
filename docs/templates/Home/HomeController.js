@@ -13,6 +13,8 @@ HomeController.$inject = ['$scope','$http'];
  * @param {*} $http 
  */
 function HomeController ($scope, $http) {
+
+  // make ajax request to a local json file
   $http({
     method:'get',
     url: 'data.json'
@@ -23,12 +25,11 @@ function HomeController ($scope, $http) {
   // ajax success response
   function getPetsData(response, status, headers, config) {
     var pets = response.data.data;
+
     $scope.pets = pets;
 
-    pets.forEach(element => {
-      // set the values on localstorage
-      localStorage.setItem(`pet_${element.id}`, JSON.stringify(element));
-    });
+    // set the values from pets to localstorage
+    localStorage.setItem('pets', JSON.stringify(pets));
   }
 
   // ajax error response

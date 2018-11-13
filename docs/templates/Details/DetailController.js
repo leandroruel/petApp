@@ -17,6 +17,12 @@ var vm = this;
 // get the pet info from localstorage and parse the json
 var petInfo = JSON.parse(localStorage.getItem(`pet_${$stateParams.id}`));
 
-// get the pet info
-$scope.pet = petInfo;
+var pet = JSON.parse(localStorage.getItem('pets'));
+
+pet.forEach(element => {
+    if (element.id == $stateParams.id) {
+        $scope.pet = element;
+    }
+});
+
 }
